@@ -7,6 +7,7 @@
         <h1>UpConstruction<span>.</span></h1>
       </a>
 
+      @include('website.components.AuthModal')
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
@@ -16,7 +17,7 @@
             <li><a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
             <li><a href="{{ route('projects') }}" class="{{ request()->routeIs('projects') ? 'active' : '' }}">Projects</a></li>
             <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
-
+            <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">Login</button</li>
         </ul>
       </nav><!-- .navbar -->
 
