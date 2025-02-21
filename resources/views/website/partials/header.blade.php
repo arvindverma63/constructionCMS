@@ -7,7 +7,7 @@
         <h1>UpConstruction<span>.</span></h1>
       </a>
 
-      @include('website.components.AuthModal')
+      @include('website.components.Auth.AuthModal')
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">

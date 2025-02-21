@@ -33,6 +33,8 @@
             border-bottom: 2px solid #0d6efd;
         }
     </style>
+
+    @include('website.components.Auth.VerfiyOtp')
 <!-- Authentication Modal -->
 <div class="modal fade" id="authModal" data-bs-backdrop="false" data-bs-keyboard="true" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
 
@@ -132,6 +134,48 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#loginTab form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form from reloading the page
+
+            let email = document.getElementById("loginEmail").value.trim();
+            let password = document.getElementById("loginPassword").value.trim();
+
+            if (!email || !password) {
+                alert("Please fill in both fields.");
+                return;
+            }
+
+            fetch("/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
+                },
+                body: JSON.stringify({ email, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    // Show OTP Modal
+                    var authModal = new bootstrap.Modal(document.getElementById("authModal"));
+                    authModal.hide();
+
+                    var otpModal = new bootstrap.Modal(document.getElementById("otpModal"));
+                    otpModal.show();
+                } else {
+                    alert(data.message || "Login failed. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Something went wrong. Please try again later.");
+            });
+        });
+    });
+</script>
 <script>
     function togglePassword(passwordId, toggleIconId) {
         const passwordField = document.getElementById(passwordId);

@@ -26,6 +26,7 @@
 
 <!-- Template Main CSS File -->
 <link href="assets/css/main.css" rel="stylesheet">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 <!-- =======================================================
 * Template Name: UpConstruction - v1.3.0

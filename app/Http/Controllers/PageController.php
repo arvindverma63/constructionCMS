@@ -18,4 +18,7 @@ class PageController extends Controller
     public function contactPage(){
         return view('website.pages.contact');
     }
+    public function userAdminDashboard(){
+        return view('userAdmin.index');
+    }
 }
