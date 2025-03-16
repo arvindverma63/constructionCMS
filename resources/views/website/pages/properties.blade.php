@@ -63,9 +63,9 @@
                             <label for="price-range" class="form-label fw-bold">Price Range</label>
                             <select class="form-select" id="price-range">
                                 <option value="">Any Price</option>
-                                <option value="0-500k">$0 - $500k</option>
-                                <option value="500k-1m">$500k - $1m</option>
-                                <option value="1m+">$1m+</option>
+                                <option value="0-500k">₹0 - ₹500k</option>
+                                <option value="500k-1m">₹500k - ₹1m</option>
+                                <option value="1m+">₹1m+</option>
                             </select>
                         </div>
                         <div class="col-md-1">
@@ -111,7 +111,7 @@
                                         <div class="d-flex flex-wrap gap-2 mb-3">
                                             <span class="badge bg-light text-dark border"><i class="bi bi-house feature-icon"></i>Residential</span>
                                             <span class="badge bg-light text-dark border"><i class="bi bi-rulers feature-icon"></i>2000 sqft</span>
-                                            <span class="badge bg-light text-dark border"><i class="bi bi-cash feature-icon"></i>$750,000</span>
+                                            <span class="badge bg-light text-dark border"><i class="bi bi-cash feature-icon"></i>₹750,000</span>
                                         </div>
                                         <div class="progress mb-3">
                                             <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
