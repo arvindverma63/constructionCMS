@@ -26,6 +26,7 @@ Route::get('/contact',[PageController::class,'contactPage'])->name('contact');
 
 Route::post('/login',[UserController::class,'login']);
 Route::post('/verify-otp',[UserController::class,'verifyOtp']);
+Route::get('/properties',[PageController::class,'listProperties']);
 
 Route::middleware(['auth.token'])->group(function () {
 

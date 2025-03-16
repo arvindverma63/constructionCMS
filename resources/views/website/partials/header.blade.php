@@ -17,7 +17,7 @@
             <li><a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
             <li><a href="{{ route('projects') }}" class="{{ request()->routeIs('projects') ? 'active' : '' }}">Projects</a></li>
             <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
-            <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">Login</button</li>
+            <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#socialLoginModal">Login</button</li>
         </ul>
       </nav><!-- .navbar -->
 

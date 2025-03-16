@@ -21,4 +21,7 @@ class PageController extends Controller
     public function userAdminDashboard(){
         return view('userAdmin.index');
     }
+    public function listProperties(){
+        return view('website.pages.properties');
+    }
 }
