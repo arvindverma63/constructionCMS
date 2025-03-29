@@ -22,7 +22,7 @@
         <div class="modal-body text-center">
           <p>Choose your preferred social platform to continue:</p>
           <div class="d-flex justify-content-center gap-3">
-            <a href="/properties" class="btn btn-outline-danger">
+            <a href="{{ route('auth.google') }}" class="btn btn-outline-danger">
               <i class="fab fa-google me-2"></i> Google
             </a>
             <a href="/properties" class="btn btn-outline-primary">
