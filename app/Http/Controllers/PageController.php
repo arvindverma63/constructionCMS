@@ -18,10 +18,10 @@ class PageController extends Controller
     public function contactPage(){
         return view('website.pages.contact');
     }
-    public function userAdminDashboard(){
-        return view('userAdmin.index');
-    }
     public function listProperties(){
         return view('website.pages.properties');
+    }
+    public function login(){
+        return view('website.welcome');
     }
 }
