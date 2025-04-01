@@ -46,7 +46,7 @@ class PageController extends Controller
         return view('Admin.pages.Reports.Material');
     }
     public function assignmentPage(){
-        return view('Admin.pages.workspace.assignment');
+        return view('Admin.pages.Workspace.assignment');
     }
     public function payrollPage(){
         return view('Admin.pages.Workspace.payroll');
