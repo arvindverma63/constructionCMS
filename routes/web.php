@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminControllers\ContractorController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserControllers\UserPageController;
@@ -57,6 +58,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/attendence',[PageController::class,'attendencePage'])->name('admin.attendence');
     Route::get('/admin/schedule',[PageController::class,'schedulePage'])->name('admin.schedule');
     Route::get('/admin/bidding',[PageController::class,'adminBiddingPage'])->name('admin.bidding');
+
+    Route::get('/admin/contractors',[PageController::class,'contractorPage'])->name('admin.contractor');
+    Route::post('/add/contractor',[ContractorController::class,'addContractor'])->name('admin.contractor.add');
+    Route::get('/delete/contractor/{id}',[ContractorController::class,'delete'])->name('admin.delete.contractor');
 });
 
 // User-only routes

@@ -104,6 +104,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('admin.contractor') ? 'active' : '' }}" href="{{ route('admin.contractor') }}">
+                            <span class="nav-icon">
+                                <i class="fas fa-helmet-safety"></i>
+                            </span>
+                            <span class="nav-link-text">Contractors</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('admin.projects') ? 'active' : '' }}" href="{{ route('admin.projects') }}">
                             <span class="nav-icon">
                                 <i class="fas fa-building"></i>

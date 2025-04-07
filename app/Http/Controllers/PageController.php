@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Logic\Contractor;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -59,5 +60,8 @@ class PageController extends Controller
     }
     public function adminBiddingPage(){
         return view('Admin.pages.bidding');
+    }
+    public function contractorPage(Contractor $contractor){
+        return view('Admin.pages.contractor',['contractors'=>$contractor->getContractors()]);
     }
 }
