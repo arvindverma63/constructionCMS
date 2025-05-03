@@ -247,6 +247,7 @@
                         <button class="btn btn-outline-light" type="button" id="searchBtn">
                             <i class="bi bi-search"></i>
                         </button>
+
                     </div>
                 </div>
                 <div class="card-body bg-white">
