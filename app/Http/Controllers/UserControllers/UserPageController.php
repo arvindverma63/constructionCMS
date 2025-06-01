@@ -9,6 +9,6 @@ class UserPageController extends Controller
 {
 
     public function userAdminDashboard(){
-        return view('userAdmin.index');
+        return view('userAdmin.layouts.app');
     }
 }
